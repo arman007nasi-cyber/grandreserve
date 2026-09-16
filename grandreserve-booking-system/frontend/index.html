@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrandReserve — The Reservation Ledger</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ledger">
+    <div class="ledger-head">
+      <div>
+        <img src="assets/logo.svg" alt="GrandReserve" height="56" style="margin-bottom: 12px;">
+        <p>A live floor plan. Every table you see updates the moment someone else books it — nobody can double-book a seat.</p>
+      </div>
+      <div id="auth-status">Not signed in</div>
+    </div>
+
+    <div class="panel" id="auth-panel">
+      <h2>Sign in or create an account</h2>
+      <div class="row">
+        <input id="email" type="email" placeholder="you@example.com">
+        <input id="password" type="password" placeholder="Password (min 8 characters)">
+        <input id="full-name" type="text" placeholder="Full name (for new accounts)">
+        <button onclick="register()" class="ghost">Create account</button>
+        <button onclick="login()">Sign in</button>
+        <button onclick="logout()" class="ghost">Sign out</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Tonight's floor</h2>
+      <p style="color: var(--parchment-dim); margin-top: -6px; font-size: 13px;">
+        Fixed demo slot: <strong id="slot-label" style="color: var(--brass);"></strong> — every table below reflects live availability for this time.
+      </p>
+      <div class="floor" id="floor">Loading tables…</div>
+    </div>
+
+    <div id="log"></div>
+
+    <footer>
+      GrandReserve demo — portfolio project. Support: <a href="mailto:support-x7q2f9@grandreserve-demo.com">support-x7q2f9@grandreserve-demo.com</a>
+    </footer>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
